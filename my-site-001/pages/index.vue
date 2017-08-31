@@ -10,7 +10,7 @@
       </h2>
       <div class="links">
         <!-- <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a> -->
-        <a href="https://github.com/roryzoerb/my-site/tree/master/my-site-001" target="_blank" class="button--grey">GitHub</a>
+        <a href="https://github.com/roryzoerb" target="_blank" class="button--grey">GitHub</a>
       </div>
     </div>
   </section>
