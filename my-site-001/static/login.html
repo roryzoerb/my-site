@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | RRZ Solutions</title>
+    <style>
+        .title {
+        font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+        display: block;
+        font-weight: 300;
+        font-size: 75px;
+        color: #35495e;
+        letter-spacing: 1px;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAWcYkQA29lmZ2TuOQowovbbyF-kB-AGMg",
+        authDomain: "my-site-rrzs1.firebaseapp.com",
+        databaseURL: "https://my-site-rrzs1.firebaseio.com",
+        projectId: "my-site-rrzs1",
+        storageBucket: "my-site-rrzs1.appspot.com",
+        messagingSenderId: "907676235944"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!-- *******************************************************************************************
+    * TODO(DEVELOPER): Paste the initialization snippet from:
+    * Firebase Console > Overview > Add Firebase to your web app. *
+    ***************************************************************************************** -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+        signInSuccessUrl: '/welcome',
+        signInOptions: [
+            // Leave the lines as is for the providers you want to offer your users.
+            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+            // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            // firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: '/terms'
+        };
+    
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+    
+</head>
+<body>
+    <h1 align='center' class='title'>RRZ Solutions</h1>
+    <div id="firebaseui-auth-container"></div>
+</body>
+</html>
